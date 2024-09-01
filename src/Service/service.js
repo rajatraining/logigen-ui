@@ -2,17 +2,16 @@ import { API_BASE_URL } from "../Configuration/Configuration";
 export const sendMsgToAI = async (msg,msgCount) => {
     const requestOptions = {
       method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //     Authorization: `Bearer ${process.env.REACT_APP_GPT_KEY}`,
-    //   },
-    //   body: JSON.stringify({}),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({'queryIndex': msgCount, 'query': msg}),
     };
     try {
       //const response = await (await fetch(API_URL, requestOptions)).text();
     //   const response = await (await fetch(API_URL, requestOptions));
 
-  const res = await ( await fetch(API_BASE_URL+"?query="+msg+"&msgCount="+msgCount, requestOptions)
+  const res = await ( await fetch(API_BASE_URL, requestOptions)
     .then((response)=> {
       console.log("Server call success", response);
       return response;

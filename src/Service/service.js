@@ -1,5 +1,5 @@
-export const sendMsgToAI = async (msg) => {
-    const API_URL="http://localhost:5000/api/logAalyzer?query="+msg
+import { API_BASE_URL } from "../Configuration/Configuration";
+export const sendMsgToAI = async (msg,msgCount) => {
     const requestOptions = {
       method: "POST",
     //   headers: {
@@ -12,7 +12,7 @@ export const sendMsgToAI = async (msg) => {
       //const response = await (await fetch(API_URL, requestOptions)).text();
     //   const response = await (await fetch(API_URL, requestOptions));
 
-  const res = await ( await fetch(API_URL, requestOptions)
+  const res = await ( await fetch(API_BASE_URL+"?query="+msg+"&msgCount="+msgCount, requestOptions)
     .then((response)=> {
       console.log("Server call success", response);
       return response;

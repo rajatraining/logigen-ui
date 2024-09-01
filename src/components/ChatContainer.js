@@ -71,7 +71,8 @@ function ChatContainer() {
             onClick={handleSend}
           />
         </span>
-      </div>
+        <p className="text-slate-600 text-sm flex items-start justify-start">AI-generated content. Human verification needed before proceeding. </p>
+         </div>
     </div>
     </div>
     

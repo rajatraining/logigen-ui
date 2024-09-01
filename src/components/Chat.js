@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { ContextApp } from "../utils/Context";
 import { ReactTyped ,Typed  } from "react-typed";
+import Markdown from 'react-markdown'
 
 function Chat() {
   const { message, msgEnd,initPage,setInitPage } = useContext(ContextApp);
@@ -17,33 +18,48 @@ function Chat() {
               LogiGen Co-Pilot
             </label>
           </span>
-          <p className="block text-gray-300 font-bold text-2xl">One Click to Transform Complex Logs into Clear Insights with AI</p>
+          <p className="block text-gray-400 font-bold text-2xl">One Click to Transform Complex Logs into Clear Insights with AI</p>
         </div>
 
       </div>}
      
         {message?.map((msg, i) => (
-          <div className="w-full">
+          <div
+          className={ msg.isBot
+            ?"w-full":"user-msg" }>
             <span
             key={i}
             className={
               msg.isBot
                 ? "flex drop-shadow items-start justify-start  gap-2 lg:gap-5 my-2 text-slate-600 bg-slate-200 p-3 rounded-md "
-                : "flex items-start end  flex-row-reverse text-slate-600 gap-2 lg:gap-5 my-2 p-3"
+                : "flex items-start end rounded-md flex-row-reverse text-slate-600 gap-2 user-bg-clr lg:gap-5 my-2 p-3"
             }
           >
-            <img
-              src={msg.isBot ? "bot-logo.gif" : "/userlogo.png"}
-              alt="user"
-              className="w-10 h-10 rounded object-cover"
-            />
+            {msg.ispending &&
+             <img
+             src={msg.isBot ? "bot-logo.gif" : "/userlogo.png"}
+             alt="user"
+             className="w-10 h-10 rounded object-cover"
+           />
+            }
+             {!msg.ispending &&
+             <img
+             src={msg.isBot ? "bot-logo.gif" : "/userlogo.png"}
+             alt="user"
+             className="w-10 h-10 rounded object-cover"
+           />
+            }
+            {msg.ispending &&
+              <span class="loader">Processing</span>}
+
+              {!msg.ispending &&
+              <p className="text-inherit text-[15px]">
+              <Markdown>{msg?.text}</Markdown>
+              </p>}
            
             {/* {message.length-1==i &&  <p className="text-inherit text-[15px]">
               <ReactTyped strings={[msg?.text]} typeSpeed={2}  backSpeed={2} showCursor={false} loop={false}/> </p>} */}
-            {message.length >i && 
-            <p className="text-inherit text-[15px]">
-              {msg?.text}
-              </p>}
+              
           </span>
           </div>
           

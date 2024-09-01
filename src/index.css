@@ -15,3 +15,47 @@
   border-radius: 8px; /* roundness of the scroll thumb */
 }
 
+.user-msg{
+width: auto; 
+margin-left: auto
+}
+
+.user-bg-clr{
+  background-color:#E8EBFA;
+}
+
+.user-bg-clr{
+  background-color:#E8EBFA;
+}
+.loader {
+  display: inline-block;
+  position: relative;
+  font-weight: bold;
+ /* font-size: 20px; */
+  /* font-family: Arial, Helvetica, sans-serif; */
+  box-sizing: border-box;
+}
+.loader::after {
+  content: '';  
+  width: 5px;
+  height: 5px;
+  background: currentColor;
+  position: absolute;
+  bottom: 7px;
+  right: -15px;
+  box-sizing: border-box;
+  animation: animloader 1s linear infinite;
+}
+
+@keyframes animloader {
+  
+  0% {
+    box-shadow: 10px 0 rgba(255, 255, 255, 0), 20px 0 rgba(255, 255, 255, 0);
+  }
+  50% {
+    box-shadow: 10px 0 white, 20px 0 rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 10px 0 white, 20px 0 white;
+  }
+}

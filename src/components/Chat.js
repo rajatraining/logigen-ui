@@ -7,13 +7,13 @@ function Chat() {
   const { message, msgEnd,initPage,setInitPage } = useContext(ContextApp);
   return (
     <div className=" w-full h-[85%] flex items-center justify-center overflow-hidden overflow-y-auto px-2 py-1 scroll">
-      <div className="w-full lg:w-4/5 flex flex-col h-full items-start justify-start">
+      <div className="w-full lg:w-2/4 flex flex-col h-full items-start justify-start">
      {initPage &&  <div className="flex w-full item-start justify-center">
         <div className="flex flex-col item-start justify-center w-2/4">
           <span className="flex flex-start justify-start gap-2 lg:gap-5 my-2 p-3 rounded-md">
-            <img src={"bot.gif"}
+            {/* <img src={"bot.gif"}
             alt="user"
-            className="w-20 h-20 rounded object-cover"/>
+            className="w-20 h-20 rounded object-cover"/> */}
             <label class="text-slate-600 font-bold  mb-1 md:mb-0 pr-4 text-4xl" for="inline-full-name">
               LogiGen Co-Pilot
             </label>
@@ -32,7 +32,7 @@ function Chat() {
             className={
               msg.isBot
                 ? "flex drop-shadow items-start justify-start  gap-2 lg:gap-5 my-2 text-slate-600 bg-slate-200 p-3 rounded-md "
-                : "flex items-start end rounded-md flex-row-reverse text-slate-600 gap-2 user-bg-clr lg:gap-5 my-2 p-3"
+                : "flex items-start rounded-md  text-slate-600 gap-2 user-bg-clr lg:gap-5 my-2 p-3"
             }
           >
             {msg.ispending &&

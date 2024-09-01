@@ -8,9 +8,7 @@ export const sendMsgToAI = async (msg,msgCount) => {
       body: JSON.stringify({'queryIndex': msgCount, 'query': msg}),
     };
     try {
-      //const response = await (await fetch(API_URL, requestOptions)).text();
-    //   const response = await (await fetch(API_URL, requestOptions));
-
+     
   const res = await ( await fetch(API_BASE_URL, requestOptions)
     .then((response)=> {
       console.log("Server call success", response);

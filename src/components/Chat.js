@@ -14,9 +14,9 @@ function Chat() {
             {/* <img src={"bot.gif"}
             alt="user"
             className="w-20 h-20 rounded object-cover"/> */}
-            <label class="text-slate-600 font-bold  mb-1 md:mb-0 pr-4 text-4xl" for="inline-full-name">
+            {/* <label class="text-slate-600 font-bold  mb-1 md:mb-0 pr-4 text-4xl" for="inline-full-name">
               LogiGen Co-Pilot
-            </label>
+            </label> */}
           </span>
           <p className="block text-gray-400 font-bold text-2xl">One Click to Transform Complex Logs into Clear Insights with AI</p>
         </div>

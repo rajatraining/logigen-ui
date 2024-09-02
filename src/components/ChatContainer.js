@@ -25,12 +25,35 @@ function ChatContainer() {
 
   return (
     <div className="bg-slate-100">
-      <div  class="bg-slate-100 drop-shadow-2xl h-20 rounded px-3 py-[9px]  flex items-center justify-start cursor-pointer text-white mt-5 mb-3">
-               <img
-              src="/logo.svg"
+      <div  class="bg-slate-100 drop-shadow-2xl h-20 rounded px-3 py-[9px]  flex items-center justify-between cursor-pointer text-white my-3">
+        <div>
+        <img
+              src="/birlasoft.jpg"
               alt="logo"
-              className="ml-10 w-15 h-10 rounded object-cover"
+              className="ml-10 w-15 h-16 rounded object-cover"
             />
+        </div>
+        <div>
+        <label class="text-slate-600 font-bold  mb-1 md:mb-0 pr-4 text-4xl" for="inline-full-name">
+              LogiGen Co-Pilot
+            </label>
+        </div>
+          <div className="flex items-center justify-between">
+            {/* <div className="mr-10">
+               <select placeholder="Select">
+              <option>Select 1</option>
+              <option>Select 2</option>
+            </select>
+            </div> */}
+            <div>
+            <img
+              src="/userlogo.png"
+              alt="logo"
+              className="w-15 h-10 rounded object-cover"
+            />
+            </div>
+           
+            </div> 
               </div>
               <div style={{height: "80vh"}}
       className={"w-screen  flex items-start justify-between flex-col p-2"}

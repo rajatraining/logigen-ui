@@ -25,7 +25,7 @@ function ChatContainer() {
 
   return (
     <div className="bg-slate-100">
-      <div  class="bg-slate-100 drop-shadow-2xl h-20 rounded px-3 py-[9px]  flex items-center justify-between cursor-pointer text-white my-3">
+      <div  class="bg-slate-100 drop-shadow-2xl h-20 rounded px-3 py-[9px]  flex items-center justify-between cursor-pointer text-white my-3" style={{marginLeft: "-50px"}}>
         <div>
         <img
               src="/birlasoft.jpg"
@@ -33,6 +33,13 @@ function ChatContainer() {
               className="ml-10 w-15 h-16 rounded object-cover"
             />
         </div>
+        {/* <div>
+        <img
+              src="/logo.svg"
+              alt="logo"
+              className="ml-10 w-15 h-16 rounded object-cover"
+            />
+        </div> */}
         <div>
         <label class="text-slate-600 font-bold  mb-1 md:mb-0 pr-4 text-4xl" for="inline-full-name">
               LogiGen Co-Pilot
@@ -50,6 +57,8 @@ function ChatContainer() {
               src="/userlogo.png"
               alt="logo"
               className="w-15 h-10 rounded object-cover"
+              style={{paddingRight: "30px"}}
+
             />
             </div>
            
